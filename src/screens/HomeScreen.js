@@ -1,11 +1,14 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
+
+ 
+
     return ( 
         <View style={styles.mainContainer}>
            <View style={styles.imageContainer}>
-              <Image source ={require("./assets/ampersand.png")}style={ styles.logo}/>
+              <Image source ={require("../../assets/ampersand.png")}style={ styles.logo}/>
            </View>
 
                <View style={styles.textContainer}>
@@ -14,7 +17,7 @@ export default function HomeScreen() {
                </View>
                 
 
-              <TouchableOpacity style={styles.startedContainer}>
+              <TouchableOpacity onPress={()=>navigation.navigate("RegisterSignIn")} style={styles.startedContainer}>
                   <Text style={styles.getStarted}>GET STARTED</Text>
               </TouchableOpacity>
          

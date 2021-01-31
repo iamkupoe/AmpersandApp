@@ -17,7 +17,7 @@ export default function ScanQrScreen ({navigation}) {
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
-          source={require("./assets/self.jpg")}
+          source={require("../../assets/self.jpg")}
         />
         <View style={styles.profileInfo}>
           <Text style={styles.name}>Samuel Kupoe</Text>

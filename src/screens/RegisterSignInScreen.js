@@ -2,13 +2,13 @@ import React from 'react';
 import {View,Image,Text,StyleSheet,TouchableOpacity} from 'react-native';
 
 
-export default function RegisterSignIn() {
+export default function RegisterSignIn({ navigation }) {
 
         return(
             <View style={style.container}>
 
                 <View style={style.signInImageContainer}>
-                    <Image style={style.signInImage} source={require("./assets/signin.jpg")}/> 
+                    <Image style={style.signInImage} source={require("../../assets/sign.jpg")}/> 
                 </View>
 
                 <View style={style.textContainer}>
@@ -17,14 +17,14 @@ export default function RegisterSignIn() {
 
                     <View style={style.registerSingInBtnContainer}>
                         <View style={style.registerBtnContainer}>
-                            <TouchableOpacity style={style.registerBtn}>
+                            <TouchableOpacity onPress={()=>navigation.navigate("Register")} style={style.registerBtn}>
                                 <Text style={style.registerBtnText}>
                                     REGISTER
                                 </Text>
                             </TouchableOpacity>                        
                         </View>
                         <View style={style.signInBtnContainer}>
-                            <TouchableOpacity style={style.signInBtn}>
+                            <TouchableOpacity onPress={()=>navigation.navigate("SignIn")} style={style.signInBtn}>
                                 <Text style={style.signInBtnText}>
                                     SIGN IN
                                 </Text>
